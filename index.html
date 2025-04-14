@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trash-To-Treasure - Transform plastic waste into valuable resources" />
+  <title>Trash-To-Treasure</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <a href="/" class="logo">Trash-To-Treasure</a>
+        <nav>
+          <a href="#" class="active">Home</a>
+          <a href="pickup.html">Request-Pickup</a>
+          <a href="#">Rewards</a>
+          <a href="#">Resources</a>
+          <button class="login-btn">Log In</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Turning Waste to Worth</h1>
+          <p>A waste management initiative engaging youth and rural communities to transform plastic waste into valuable resources.</p>
+          <a href="pickup.html" class="request-pickup">
+            Request Pickup
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-image">
+          <img src="https://img.icons8.com/fluency/240/recycle-bin.png" alt="Recycling Illustration" />
+        </div>
+      </section>
+
+      <section class="key-features">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3>Waste Pickup Scheduling</h3>
+            <p>Easily request waste collection from your doors</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-gift"></i>
+            </div>
+            <h3>Coupon & Reward System</h3>
+            <p>Earn coupons for plastic waste, redeem for rewards</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-book-reader"></i>
+            </div>
+            <h3>Awareness Resources</h3>
+            <p>Access educational materials on health and environment</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="coupon-section">
+        <h2>Redeem Your Coupon or Reward</h2>
+        <p>Enter your mobile number to verify and claim a coupon or reward earned from Waste Teller Machine (WTM).</p>
+        <form class="mobile-input" id="verificationForm">
+          <div class="input-group">
+            <input 
+              type="tel" 
+              id="mobileNumber" 
+              pattern="[0-9]{10}" 
+              placeholder="Enter your mobile number" 
+              required
+            />
+            <button type="submit" class="verify-btn">Verify OTP</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="rewards-tracker">
+        <h2>Track Your Rewards</h2>
+        <div class="rewards-cards">
+          <div class="reward-card">
+            <h3>Coupons</h3>
+            <div class="reward-amount" id="couponCount">1</div>
+          </div>
+          <div class="reward-card">
+            <h3>Rewards</h3>
+            <div class="reward-amount" id="rewardValue">₹750</div>
+            <a href="#" class="view-history">View History</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#">Swachh Bharat Info</a>
+      <a href="#">Health Tips</a>
+      <a href="#">Tobacco Awareness</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

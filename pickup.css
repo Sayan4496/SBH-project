@@ -1,0 +1,269 @@
+/* Pickup Form Styles */
+.pickup-form-section {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 3em;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pickup-form-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.pickup-form-section h1 {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+  position: relative;
+}
+
+.pickup-form-section h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.section-description {
+  color: #666;
+  margin-bottom: 2em;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.pickup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.form-row {
+  display: flex;
+  gap: 2em;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8em;
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1em 1.2em;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #F9FAFB;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(47, 121, 85, 0.1);
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.5em;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.pickup-form select[multiple] {
+  height: 120px;
+  padding: 0.8em;
+}
+
+.pickup-form select[multiple] option {
+  padding: 0.8em;
+  margin: 0.2em 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pickup-form select[multiple] option:hover {
+  background-color: #F0F9F4;
+}
+
+.pickup-form select[multiple] option:checked {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 1em auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #246344;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 121, 85, 0.2);
+}
+
+.submit-btn:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submit-btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.submit-btn.success {
+  background-color: #10B981;
+}
+
+.submit-btn.error {
+  background-color: #EF4444;
+}
+
+/* Clear button styles */
+.clear-input {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9CA3AF;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2em;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.clear-input:hover {
+  background-color: #F3F4F6;
+  color: var(--text-color);
+}
+
+/* Message styles */
+.message {
+  padding: 1em 1.5em;
+  border-radius: 12px;
+  margin-top: 1em;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: #DEF7EC;
+  color: #057A55;
+  border: 1px solid #BCF0DA;
+}
+
+.error-message {
+  background-color: #FDE8E8;
+  color: #C81E1E;
+  border: 1px solid #FECACA;
+}
+
+@media (max-width: 768px) {
+  .pickup-form-section {
+    margin: 1em;
+    padding: 2em;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .pickup-form-section h1 {
+    font-size: 2rem;
+  }
+
+  .submit-btn {
+    padding: 0.9em 1.5em;
+    font-size: 1rem;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
