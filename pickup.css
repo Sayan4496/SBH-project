@@ -1,32 +1,30 @@
 /* Pickup Form Styles */
 .pickup-form-section {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 3em;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 600px;
+  margin: 1.5em auto;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(47, 121, 85, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
 }
 
 .pickup-form-section:hover {
+  background: rgba(255, 255, 255, 0.8);
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(47, 121, 85, 0.2);
 }
 
 .pickup-form-section h1 {
-  color: var(--text-color);
-  font-size: 2.8rem;
+  color: var(--primary-color);
+  font-size: 2.2rem;
   margin-bottom: 0.5em;
   text-align: center;
   position: relative;
-  background: linear-gradient(45deg, var(--primary-color), #246344);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pickup-form-section h1::after {
@@ -42,11 +40,13 @@
 }
 
 .section-description {
-  color: #4B5563;
-  margin-bottom: 2.5em;
+  color: #1A1E1F;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.8em;
   text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.5;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -55,12 +55,12 @@
 .pickup-form {
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
+  gap: 1.2em;
 }
 
 .form-row {
   display: flex;
-  gap: 2em;
+  gap: 1.2em;
 }
 
 .form-row .form-group {
@@ -69,122 +69,109 @@
 
 .form-group {
   position: relative;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.8em;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 0.8em;
+  color: #1A1E1F;
   font-weight: 600;
-  color: var(--text-color);
-  font-size: 1rem;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5em;
+  display: block;
+  font-size: 0.95rem;
   letter-spacing: 0.5px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%;
-  padding: 1.2em 1.5em;
-  border: 2px solid rgba(229, 231, 235, 0.5);
-  border-radius: 16px;
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(47, 121, 85, 0.15);
+  border-radius: 8px;
+  padding: 0.8em 1em;
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  color: #1A1E1F;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.85);
   border-color: var(--primary-color);
-  background: white;
   box-shadow: 0 0 0 4px rgba(47, 121, 85, 0.1);
-  outline: none;
   transform: translateY(-2px);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #9CA3AF;
-  opacity: 0.8;
+  color: rgba(75, 85, 99, 0.8);
 }
 
 .form-group small {
   display: block;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
   color: #6B7280;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 .pickup-form select[multiple] {
-  height: 120px;
-  padding: 0.8em;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(47, 121, 85, 0.15);
+  height: 100px;
+  padding: 0.5em;
 }
 
 .pickup-form select[multiple] option {
-  padding: 1em;
-  margin: 0.3em 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.6em;
+  margin: 0.2em 0;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .pickup-form select[multiple] option:hover {
-  background-color: rgba(47, 121, 85, 0.1);
+  background: rgba(47, 121, 85, 0.1);
 }
 
 .pickup-form select[multiple] option:checked {
-  background-color: var(--primary-color);
+  background: rgba(47, 121, 85, 0.9);
   color: white;
 }
 
 .submit-btn {
-  background: linear-gradient(45deg, var(--primary-color), #246344);
+  background: linear-gradient(45deg, 
+    rgba(47, 121, 85, 0.95), 
+    rgba(36, 99, 68, 0.95)
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: white;
-  border: none;
-  padding: 1.2em 2.5em;
-  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.9em 2em;
+  border-radius: 12px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
-  max-width: 300px;
-  margin: 1.5em auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8em;
-  position: relative;
-  overflow: hidden;
-}
-
-.submit-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: 0.5s;
+  box-shadow: 0 4px 15px rgba(47, 121, 85, 0.2);
+  margin-top: 1em;
+  max-width: 250px;
 }
 
 .submit-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, 
+    rgba(36, 99, 68, 0.95), 
+    rgba(26, 76, 50, 0.95)
+  );
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(47, 121, 85, 0.3);
-}
-
-.submit-btn:hover::before {
-  left: 100%;
+  box-shadow: 0 8px 25px rgba(47, 121, 85, 0.3);
 }
 
 .submit-btn:disabled {
@@ -248,46 +235,46 @@
 
 /* Message styles */
 .message {
-  padding: 1.2em 1.8em;
-  border-radius: 16px;
-  margin-top: 1.5em;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 0.8em 1.2em;
+  margin-top: 1em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   animation: slideIn 0.3s ease;
   font-weight: 500;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  font-size: 0.95rem;
 }
 
 .success-message {
-  background: rgba(222, 247, 236, 0.9);
-  color: #057A55;
-  border: 1px solid rgba(188, 240, 218, 0.5);
+  background: rgba(222, 247, 236, 0.85);
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .error-message {
-  background: rgba(253, 232, 232, 0.9);
-  color: #C81E1E;
-  border: 1px solid rgba(254, 202, 202, 0.5);
+  background: rgba(254, 226, 226, 0.85);
+  border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
 @media (max-width: 768px) {
   .pickup-form-section {
     margin: 1em;
-    padding: 2em;
+    padding: 1.5em;
+  }
+
+  .pickup-form-section h1 {
+    font-size: 1.8rem;
   }
 
   .form-row {
     flex-direction: column;
-    gap: 1.5em;
-  }
-
-  .pickup-form-section h1 {
-    font-size: 2.2rem;
+    gap: 0.8em;
   }
 
   .submit-btn {
-    padding: 1em 2em;
-    font-size: 1rem;
+    padding: 0.8em 1.5em;
+    font-size: 0.95rem;
   }
 }
 
@@ -305,5 +292,132 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Add background image and styling */
+body {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://img.icons8.com/fluency/240/recycle-bin.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  background: transparent;
+}
+
+/* Header and footer update */
+header {
+  background: rgba(47, 121, 85, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  background: rgba(47, 121, 85, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Split Layout Styles */
+.split-layout {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.image-section {
+  flex: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+}
+
+.image-overlay h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.image-overlay p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Form Section Adjustments */
+.pickup-form-section {
+  flex: 1;
+  width: 50%;
+  margin-left: 50%;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Remove the page background */
+.page-background {
+  display: none;
+}
+
+/* Adjust container */
+.container {
+  background: none;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header and footer adjustments */
+header, footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .split-layout {
+    flex-direction: column;
+  }
+
+  .image-section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .pickup-form-section {
+    width: 100%;
+    margin-left: 0;
+    min-height: auto;
   }
 }

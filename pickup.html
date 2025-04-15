@@ -9,8 +9,32 @@
   <link rel="stylesheet" href="pickup.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .page-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      background-image: linear-gradient(
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
+      ),
+      url('waste-management-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
+  <div class="page-background"></div>
   <div class="container">
     <header>
       <div>
@@ -26,68 +50,77 @@
     </header>
 
     <main>
-      <section class="pickup-form-section">
-        <h1>Request Waste Pickup</h1>
-        <p class="section-description">Schedule a convenient time for waste collection from your location</p>
-
-        <form id="pickupForm" class="pickup-form">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
+      <div class="split-layout">
+        <div class="image-section">
+          <img src="pico.jpg" alt="Waste Management Illustration" class="feature-image">
+          <div class="image-overlay">
+            <h2>Professional Waste Management Services</h2>
+            <p>We ensure proper disposal and recycling of all types of waste</p>
           </div>
+        </div>
+        <section class="pickup-form-section">
+          <h1>Request Waste Pickup</h1>
+          <p class="section-description">Schedule a convenient time for waste collection from your location</p>
 
-          <div class="form-group">
-            <label for="mobile">Mobile Number</label>
-            <input type="tel" id="mobile" name="mobile" pattern="[6-9]\d{9}" required>
-          </div>
-
-          <div class="form-group">
-            <label for="address">Pickup Address</label>
-            <textarea id="address" name="address" rows="3" required></textarea>
-          </div>
-
-          <div class="form-row">
+          <form id="pickupForm" class="pickup-form">
             <div class="form-group">
-              <label for="date">Preferred Date</label>
-              <input type="date" id="date" name="date" required>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
             </div>
 
             <div class="form-group">
-              <label for="time">Preferred Time</label>
-              <select id="time" name="time" required>
-                <option value="">Select time slot</option>
-                <option value="morning">Morning (9 AM - 12 PM)</option>
-                <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
-                <option value="evening">Evening (3 PM - 6 PM)</option>
+              <label for="mobile">Mobile Number</label>
+              <input type="tel" id="mobile" name="mobile" pattern="[6-9]\d{9}" required>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Pickup Address</label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+
+              <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <select id="time" name="time" required>
+                  <option value="">Select time slot</option>
+                  <option value="morning">Morning (9 AM - 12 PM)</option>
+                  <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                  <option value="evening">Evening (3 PM - 6 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="wasteType">Type of Waste</label>
+              <select id="wasteType" name="wasteType" multiple required>
+                <option value="plastic">Plastic Waste</option>
+                <option value="paper">Paper Waste</option>
+                <option value="electronic">Electronic Waste</option>
+                <option value="metal">Metal Waste</option>
+                <option value="glass">Glass Waste</option>
               </select>
+              <small>Hold Ctrl/Cmd to select multiple types</small>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="wasteType">Type of Waste</label>
-            <select id="wasteType" name="wasteType" multiple required>
-              <option value="plastic">Plastic Waste</option>
-              <option value="paper">Paper Waste</option>
-              <option value="electronic">Electronic Waste</option>
-              <option value="metal">Metal Waste</option>
-              <option value="glass">Glass Waste</option>
-            </select>
-            <small>Hold Ctrl/Cmd to select multiple types</small>
-          </div>
+            <div class="form-group">
+              <label for="quantity">Approximate Quantity (in kg)</label>
+              <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
 
-          <div class="form-group">
-            <label for="quantity">Approximate Quantity (in kg)</label>
-            <input type="number" id="quantity" name="quantity" min="1" required>
-          </div>
+            <div class="form-group">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="2"></textarea>
+            </div>
 
-          <div class="form-group">
-            <label for="notes">Additional Notes</label>
-            <textarea id="notes" name="notes" rows="2"></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Schedule Pickup</button>
-        </form>
-      </section>
+            <button type="submit" class="submit-btn">Schedule Pickup</button>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer>
